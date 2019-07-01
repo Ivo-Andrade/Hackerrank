@@ -14,13 +14,13 @@ while n > 0:
 #retrive T
 t = int(inputText.readline())
 
-#for each word, find matches in lines
+#for each word, find match frequency in lines
 while t > 0:
     match = []
-    word = inputText.readline()         #retrive word
-    word = word.replace("\n", "")               #remove \n char
-    Regex_Pattern = r'(^|(?<=[\W]))'+ re.escape(word) + '((?=[\W])|$)'              #update regEx
+    word = inputText.readline()
+    word = word.replace("\n", "")
+    Regex_Pattern = r'(^|(?<=[\W]))'+ re.escape(word) + '((?=[\W])|$)'
     for line in lines:
-        match.extend(re.findall(Regex_Pattern, line))       #for each line, find matches
-    print len(match)            #print match frequency
+        match.extend(re.findall(Regex_Pattern, line))
+    print len(match)
     t = t - 1
