@@ -2,7 +2,7 @@ import re
 import sys
 
 #opening tag pattern
-Regex_Pattern = r'<\s*([^/][a-zA-Z0-9]*)'
+Regex_Pattern = r'<\s*([^\/][a-zA-Z0-9]*)'
 
 #retrive N
 inputText = sys.stdin
