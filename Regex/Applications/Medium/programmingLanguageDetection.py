@@ -1,18 +1,17 @@
 import re
 import sys
 
-#Non-Python pattern
-regexNotPython = r';$'
+#Java pattern
+regexJava = r'import'
 
 #C pattern
 regexC = r'#include'
 
 #from input, detect language
 inputText = sys.stdin.read()
-if re.search(regexNotPython,inputText):
-    if re.search(regexC,inputText):
-        print "C"
-    else:
-        print "Java"
+if re.search(regexJava,inputText):
+    print "Java"
+elif re.search(regexC,inputText):
+    print "C"
 else:
     print "Python"
