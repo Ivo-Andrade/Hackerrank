@@ -14,7 +14,7 @@ while n > 0:
 #retrive T
 t = int(inputText.readline())
 
-#for each word
+#for each word, find matches in lines
 while t > 0:
     match = []
     word = inputText.readline()         #retrive word
